@@ -1,6 +1,6 @@
 import os
 import pylearn2
-dirname = os.path.abspath('/vagrant/ml_invsetigaiton/pylearn2_softmax')
+dirname = os.path.abspath('.')
 with open(os.path.join(dirname, 'sr_dataset.yaml'), 'r') as f:
     dataset = f.read()
 hyper_params = {'train_stop' : 50000}
