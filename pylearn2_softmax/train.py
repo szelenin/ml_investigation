@@ -1,4 +1,5 @@
 import os
+from pylearn2.config import yaml_parse
 
 dirname = os.path.abspath('.')
 with open(os.path.join(dirname, 'sr_dataset.yaml'), 'r') as f:
@@ -24,3 +25,6 @@ with open(os.path.join(dirname, 'sr_train.yaml'), 'r') as f:
 save_path = '.'
 train = train %locals()
 print train
+
+train = yaml_parse.load(train)
+train.main_loop()
